@@ -21,7 +21,7 @@ export default function Semester({}: Props) {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className='w-[544px] flex flex-col items-start mx-auto'>
         {/* Heading */}
