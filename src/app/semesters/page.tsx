@@ -23,7 +23,7 @@ export default function Semester({}: Props) {
     <div>
       <Navbar />
 
-      <div className='w-max flex flex-col items-start mx-auto px-4'>
+      <div className='w-[544px] flex flex-col items-start mx-auto'>
         {/* Heading */}
         {/* <h1 className='text-4xl font-semibold'>Semester Wise Learning</h1> */}
 
@@ -41,7 +41,7 @@ export default function Semester({}: Props) {
         <Separator className='mt-2 bg-slate-300' />
 
         {/* Semesters */}
-        <div className='grid grid-flow-col place-content-center py-6 grid-rows-4 gap-8'>
+        <div className='grid grid-flow-col place-content-center py-6 grid-rows-4 grid-cols-2 gap-8'>
           {semestersData.map((semester) => (
             <Button
               asChild

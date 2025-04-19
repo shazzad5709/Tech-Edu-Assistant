@@ -7,6 +7,7 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from '@/components/ui/breadcrumb';
+import { Separator } from '@/components/ui/separator';
 import { semestersData } from '@/data/strings';
 import { notFound } from 'next/navigation';
 
@@ -24,8 +25,9 @@ export default function SemestersLayout({ children, params }: Readonly<Props>) {
   return (
     <>
       <Navbar />
-      <div className='flex flex-col items-center'>
-        <Breadcrumb className='pt-4'>
+
+      <div className='w-[544px] flex flex-col items-start mx-auto'>
+        <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href='/semesters' className='text-base'>
@@ -44,8 +46,10 @@ export default function SemestersLayout({ children, params }: Readonly<Props>) {
             )}
           </BreadcrumbList>
         </Breadcrumb>
+
+        <Separator className='mt-2 mb-4 bg-slate-300' />
+        <section>{children}</section>
       </div>
-      <section>{children}</section>
     </>
   );
 }
