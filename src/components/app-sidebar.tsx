@@ -3,14 +3,11 @@
 import * as React from 'react';
 import {
   BookOpen,
-  Bot,
   Command,
-  Frame,
+  Library,
   LifeBuoy,
   Map,
-  PieChart,
   Send,
-  Settings2,
   SquareTerminal,
 } from 'lucide-react';
 
@@ -50,7 +47,7 @@ const data = {
     {
       title: 'Subjects',
       url: '#',
-      icon: Frame,
+      icon: BookOpen,
       items: [
         {
           title: 'Genesis',
@@ -66,52 +63,44 @@ const data = {
         },
       ],
     },
-    {
-      title: 'Books',
-      url: '#',
-      icon: BookOpen,
-      items: [
-        {
-          title: 'Introduction',
-          url: '#',
-        },
-        {
-          title: 'Get Started',
-          url: '#',
-        },
-        {
-          title: 'Tutorials',
-          url: '#',
-        },
-        {
-          title: 'Changelog',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Syllabus',
-      url: '#',
-      icon: Map,
-      items: [
-        {
-          title: 'General',
-          url: '#',
-        },
-        {
-          title: 'Team',
-          url: '#',
-        },
-        {
-          title: 'Billing',
-          url: '#',
-        },
-        {
-          title: 'Limits',
-          url: '#',
-        },
-      ],
-    },
+    // {
+    //   title: 'Books',
+    //   url: '#',
+    //   icon: BookOpen,
+    //   items: [
+    //     {
+    //       title: 'Introduction',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Get Started',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Tutorials',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Changelog',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Syllabus',
+    //   url: '#',
+    //   icon: Map,
+    //   items: [
+    //     {
+    //       title: '2017-18 Version',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: '2022-23 Version',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
   ],
   navSecondary: [
     {
@@ -127,17 +116,12 @@ const data = {
   ],
   projects: [
     {
-      name: 'Design Engineering',
+      name: 'Books',
       url: '#',
-      icon: Frame,
+      icon: Library,
     },
     {
-      name: 'Sales & Marketing',
-      url: '#',
-      icon: PieChart,
-    },
-    {
-      name: 'Travel',
+      name: 'Syllabus',
       url: '#',
       icon: Map,
     },
@@ -151,9 +135,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size='lg' asChild>
-              <a href='#'>
+              <a href='/'>
                 <div className='bg-transparent flex aspect-square size-8 items-center justify-center rounded-lg'>
-                  <Image src='/t.png' alt='TEA' width={24} height={24} />
+                  <Image src='/t.png' alt='TEA' width={30} height={24} />
                 </div>
                 <div className='grid flex-1 text-left text-sm leading-tight'>
                   <span className='truncate font-medium'>IIT BSSE</span>
@@ -167,11 +151,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
-        <NavSecondary items={data.navSecondary} className='mt-auto' />
+        {/* <NavSecondary items={data.navSecondary} className='mt-auto' /> */}
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
+      <SidebarFooter>{/* <NavUser user={data.user} /> */}</SidebarFooter>
     </Sidebar>
   );
 }

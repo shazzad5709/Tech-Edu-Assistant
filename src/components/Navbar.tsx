@@ -23,11 +23,14 @@ export default function Navbar({}: Props) {
         <Image
           src='/t.png'
           alt='TEA'
-          width={36}
+          width={30}
           height={24}
           className='rounded-sm'
         />
-        <h2 className='text-3xl font-bold text-slate-700'>TEA</h2>
+        <div className='grid flex-1 text-left text-sm leading-tight'>
+          <span className='truncate font-medium'>IIT BSSE</span>
+          <span className='truncate text-xs'>Tech Edu Assistant</span>
+        </div>
       </div>
 
       <div className='flex'>

@@ -14,10 +14,12 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar';
 
-export default function Dashboard({
+export default function DashboardLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { slug: string[] };
 }>) {
   return (
     <SidebarProvider>
@@ -30,19 +32,28 @@ export default function Dashboard({
               orientation='vertical'
               className='mr-2 data-[orientation=vertical]:h-4'
             />
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem className='hidden md:block'>
-                  <BreadcrumbLink href='#'>
-                    Building Your Application
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className='hidden md:block' />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
+            {params.slug.map((segment, i) => (
+              <Breadcrumb key={segment}>
+                <BreadcrumbList>
+                  {i < params.slug.length - 1 && (
+                    <BreadcrumbSeparator className='hidden md:block' />
+                  )}
+                  {i === params.slug.length - 1 ? (
+                    <BreadcrumbItem>
+                      <BreadcrumbPage className='capitalize'>
+                        {segment}
+                      </BreadcrumbPage>
+                    </BreadcrumbItem>
+                  ) : (
+                    <BreadcrumbItem className='hidden md:block'>
+                      <BreadcrumbLink className='capitalize' href='#'>
+                        {segment}
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                  )}
+                </BreadcrumbList>
+              </Breadcrumb>
+            ))}
           </div>
         </header>
         <div className='flex flex-1 flex-col gap-4 p-4 pt-0'>
