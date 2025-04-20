@@ -36,7 +36,7 @@ const data = {
   navMain: [
     {
       title: 'Semesters',
-      url: '#semesters',
+      url: '/semesters',
       icon: Command,
       isActive: true,
       items: semestersData.map((semester) => ({
@@ -46,8 +46,9 @@ const data = {
     },
     {
       title: 'Subjects',
-      url: '#',
+      url: '/subjects',
       icon: BookOpen,
+      isActive: false,
       items: [
         {
           title: 'Genesis',

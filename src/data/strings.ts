@@ -30,7 +30,7 @@ export interface SemesterData {
 
 export const semestersData: SemesterData[] = [
   {
-    slug: '1stSem', name: '1st Semester', courses: [
+    slug: '1st-sem', name: '1st Semester', courses: [
       { code: "CSE101", title: "Structured Programming" },
       { code: "CSE102", title: "Discrete Mathematics" },
       { code: "STAT103", title: "Probability and Statistics for Engineers I" },
@@ -40,7 +40,7 @@ export const semestersData: SemesterData[] = [
     ]
   },
   {
-    slug: '2ndSem', name: '2nd Semester', courses: [
+    slug: '2nd-sem', name: '2nd Semester', courses: [
       { code: "CSE201", title: "Data Structure and Algorithm" },
       { code: "CSE211", title: "Computer Organization" },
       { code: "STAT203", title: "Probability and Statistics for Engineers II" },
@@ -50,7 +50,7 @@ export const semestersData: SemesterData[] = [
     ]
   },
   {
-    slug: '3rdSem', name: '3rd Semester', courses: [
+    slug: '3rd-sem', name: '3rd Semester', courses: [
       { code: "CSE301", title: "Combinatorial Optimization" },
       { code: "SE312", title: "Theory of Computing" },
       { code: "CSE311", title: "Computer Networking" },
@@ -60,7 +60,7 @@ export const semestersData: SemesterData[] = [
     ]
   },
   {
-    slug: '4thSem', name: '4th Semester', courses: [
+    slug: '4th-sem', name: '4th Semester', courses: [
       { code: "CSE401", title: "Operating System and System Programming" },
       { code: "GE402", title: "Business Psychology" },
       { code: "CSE411", title: "Information Security" },
@@ -70,7 +70,7 @@ export const semestersData: SemesterData[] = [
     ]
   },
   {
-    slug: '5thSem', name: '5th Semester', courses: [
+    slug: '5th-sem', name: '5th Semester', courses: [
       { code: "SE511", title: "Professional Ethics for Information Systems" },
       { code: "CSE502", title: "Web Technology" },
       { code: "BUS503", title: "Business Communications" },
@@ -80,7 +80,7 @@ export const semestersData: SemesterData[] = [
     ]
   },
   {
-    slug: '6thSem', name: '6th Semester', courses: [
+    slug: '6th-sem', name: '6th Semester', courses: [
       { code: "CSE601", title: "Distributed Systems" },
       { code: "SE611", title: "Software Metrics" },
       { code: "SE612", title: "Software Security" },
@@ -90,12 +90,12 @@ export const semestersData: SemesterData[] = [
     ]
   },
   {
-    slug: '7thSem', name: '7th Semester', courses: [
+    slug: '7th-sem', name: '7th Semester', courses: [
       { code: "SE701", title: "Internship" }
     ]
   },
   {
-    slug: '8thSem', name: '8th Semester', courses: [
+    slug: '8th-sem', name: '8th Semester', courses: [
       { code: "SE801", title: "Project" },
       { code: "SE811", title: "Software Maintenance" },
       { code: "SE803", title: "Software Project Management" },
@@ -104,3 +104,7 @@ export const semestersData: SemesterData[] = [
     ]
   },
 ];
+
+export const contentTypes = [
+  'Books', 'Slides', 'Exercises', 'Additional', 'Outline', 'SPL Resources'
+]

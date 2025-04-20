@@ -15,7 +15,7 @@ export default function Hero({}: Props) {
         IIT BSSE Course contents for your studies in one place.
       </p>
       <Button asChild className='text-lg py-6 px-8 font-normal tracking-wide'>
-        <Link href={'/dashboard'}>Get Started</Link>
+        <Link href={'/dashboard/semesters'}>Get Started</Link>
       </Button>
     </div>
   );
